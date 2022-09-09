@@ -1,7 +1,8 @@
-/* Copyright 2022, Sistemas Embebidos
+/* Copyright 2022, Laboratorio de Microprocesadores 
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
- * Copyright 2022, Gonzalo Sergio Rodulfo <gonzalosergiorodulfo@gmail.com>
+ * http://www.microprocesadores.unt.edu.ar/
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,23 +32,22 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+/** @file alumno.c
  **
- ** @brief Programa principal del tp2
+ ** @brief codigo fuente de las funciones de alumno
  **
+ ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.08.27 | evolentini  | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla plantilals de Archivos
+ ** @defgroup plantilla Plantilals de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
 
 /* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
 #include "alumno.h"
-
 #include <stdio.h>
 
 /* === Definicion y Macros privados ======================================== */
@@ -64,16 +64,12 @@
 
 /* === Definiciones de funciones publicas ================================== */
 
-int main(void) {
-	static const struct alumno_s alumno = {
-		.apellido = "RODULFO",
-		.nombre = "gonzalo",
-		.documento = "30.766.269"
-	};
+void nombre( const struct alumno_s * alumno){
 
-	nombre(&alumno);
-	
-	return 0;
+printf("apellido del Alumno: %s\r\n", alumno->apellido);
+printf("nombre del Alumno: %s\r\n", alumno->nombre);
+printf("documento del Alumno: %s\r\n", alumno->documento);
+
 }
 
 /* === Ciere de documentacion ============================================== */

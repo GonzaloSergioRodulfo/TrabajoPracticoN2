@@ -1,7 +1,8 @@
-/* Copyright 2022, Sistemas Embebidos
+/* Copyright 2022, Laboratorio de Microprocesadores 
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
- * Copyright 2022, Gonzalo Sergio Rodulfo <gonzalosergiorodulfo@gmail.com>
+ * http://www.microprocesadores.unt.edu.ar/
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,52 +32,59 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+#ifndef ALUMNO_H   /*! @cond    */
+#define ALUMNO_H   /*! @endcond */
+
+/** @file alumno.h
  **
- ** @brief Programa principal del tp2
+ ** @brief cabecera del modulo con las funciones de alumno 
  **
+ ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.08.27 | evolentini  | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla plantilals de Archivos
+ ** @defgroup plantilla Plantilals de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
 
-/* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
-#include "alumno.h"
+/* === Inclusiones de archivos externos ==================================== */
 
-#include <stdio.h>
+/* === Cabecera C++ ======================================================== */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-/* === Definicion y Macros privados ======================================== */
+/* === Definicion y Macros publicos ======================================== */
 
-/* === Declaraciones de tipos de datos privados ============================ */
+/* == Declaraciones de tipos de datos publicos ============================= */
 
-/* === Definiciones de variables privadas ================================== */
+//! estructura que contiene los datos de alumno
+struct alumno_s
+{
+    char apellido[64];      //!< Cadena de caracteres con el apellido del alumno
+    char nombre[64];      //!< Cadena de caracteres con el nombre del alumno
+    char documento[16];      //!< Cadena de caracteres con el documento del alumno
+};
 
-/* === Definiciones de variables publicas ================================== */
+/* === Declaraciones de variables publicas ================================= */
 
-/* === Declaraciones de funciones privadas ================================= */
+/* === Declaraciones de funciones publicas ================================= */
+/**
+ * @brief Funcion para mostrar el nombre del alumno
+ * esta funcion muestra el nombre del alumno por pantalla. debe recibir un
+ * puntero a una estructura con los datos del alumno que se quiere mostrar.
+ * @param alumno Puntero a la estrucutura con los datos del alumno
+ */
 
-/* === Definiciones de funciones privadas ================================== */
-
-/* === Definiciones de funciones publicas ================================== */
-
-int main(void) {
-	static const struct alumno_s alumno = {
-		.apellido = "RODULFO",
-		.nombre = "gonzalo",
-		.documento = "30.766.269"
-	};
-
-	nombre(&alumno);
-	
-	return 0;
-}
+void nombre( const struct alumno_s * alumno);
 
 /* === Ciere de documentacion ============================================== */
+#ifdef __cplusplus
+}
+#endif
 
 /** @} Final de la definición del modulo para doxygen */
 
+#endif   /* ALUMNO_H */

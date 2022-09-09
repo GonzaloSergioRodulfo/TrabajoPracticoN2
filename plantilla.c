@@ -1,7 +1,8 @@
-/* Copyright 2022, Sistemas Embebidos
+/* Copyright 2022, Laboratorio de Microprocesadores 
  * Facultad de Ciencias Exactas y Tecnología 
  * Universidad Nacional de Tucuman
- * Copyright 2022, Gonzalo Sergio Rodulfo <gonzalosergiorodulfo@gmail.com>
+ * http://www.microprocesadores.unt.edu.ar/
+ * Copyright 2022, Esteban Volentini <evolentini@herrera.unt.edu.ar>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -31,24 +32,26 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-/** @file main.c
+/** @file plantilla.c
  **
- ** @brief Programa principal del tp2
+ ** @brief Plantilla de archivos fuente
  **
+ ** Plantilla para los archivos de codigo fuente de prácticos de las 
+ ** asignaturas Diseño Integrado de Sistemas Emebebidos y Sistemas Embebidos
+ ** de Tiempo Real dictadas en de la Especialización en Integración de
+ ** Sistemas Informaticos de la Univesidad Nacional de Tucumán
+ ** 
  ** | RV | YYYY.MM.DD | Autor       | Descripción de los cambios              |
  ** |----|------------|-------------|-----------------------------------------|
  ** |  1 | 2022.08.27 | evolentini  | Version inicial del archivo             |
  ** 
- ** @defgroup plantilla plantilals de Archivos
+ ** @defgroup plantilla Plantilals de Archivos
  ** @brief Plantillas de archivos normalizadas
  ** @{ 
  */
 
 /* === Inclusiones de cabeceras ============================================ */
-#include "main.h"
-#include "alumno.h"
-
-#include <stdio.h>
+#include "plantilla.h"
 
 /* === Definicion y Macros privados ======================================== */
 
@@ -63,18 +66,6 @@
 /* === Definiciones de funciones privadas ================================== */
 
 /* === Definiciones de funciones publicas ================================== */
-
-int main(void) {
-	static const struct alumno_s alumno = {
-		.apellido = "RODULFO",
-		.nombre = "gonzalo",
-		.documento = "30.766.269"
-	};
-
-	nombre(&alumno);
-	
-	return 0;
-}
 
 /* === Ciere de documentacion ============================================== */
 
